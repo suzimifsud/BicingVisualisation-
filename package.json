@@ -1,0 +1,11 @@
+{
+    "name": "BicingVisualisation",
+    "description": "bike visualisation",
+    "version": "1.0.0",
+    "main": "server.js",
+    "author": "Susannah Mifsud>",
+    "license": "MIT",
+    "dependencies": {
+        "express": "latest"
+    }
+}

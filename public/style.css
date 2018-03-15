@@ -1,0 +1,42 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+#MainBody{
+    height:800px;
+    width:100%;
+    background-color: antiquewhite;
+}
+#map {
+    height: 100%;
+}
+#controller{
+    height:100px;
+    width:100%;
+    background-color:lightgray;
+    position: absolute; 
+    bottom: 10px;
+    left: 0px;
+}
+
+#button {
+    height:100px;
+    width:10px;
+    color: blue
+
+
+}
+    
+#text{
+    margin:10px;
+    font-size: 1.2em;
+}
+#controls{
+    display:none;
+
+
+
+}
+
