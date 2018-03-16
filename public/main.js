@@ -13,7 +13,8 @@ var activeDistrict = -1;
 var activeDistrictCenter = [];
 var displayRadius = 0.006
 
-var dataVisualized= false;
+var dataVisualized= true;
+
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), mapOptions);
 }
@@ -200,10 +201,11 @@ function displayBikeStations(freeBike, myLatLng,i){
 window.onload = function(){
   
   console.log("here");
-  
+  displayData();
 
 
 }
+
 
 
 function writeToJson(){
@@ -219,3 +221,29 @@ function writeToJson(){
 
 
 
+function ShowStationsWithNumOfBikes(data){
+  console.log(data);
+
+  //console.log(typeof data);
+    //console.log(data);
+    removeMarkers();
+    var freeBikes = new Array();
+    var lon = new Array();
+    var lat = new Array();
+    var i;
+    for(i=0; i<JsonObject.network.stations.length; i++ ){   
+        freeBikes[i]= JsonObject.network.stations[i].empty_slots;
+        lat[i] = JsonObject.network.stations[i].latitude;
+        lon[i] = JsonObject.network.stations[i].longitude;
+        var myLatLng = {lat: lat[i], lng: lon[i]};
+        console.log(JsonObject.network.stations[i]);
+        if(freeBikes[i] >= data){
+          console.log(freeBikes[i]);
+          displayBikeStations(freeBikes[i],myLatLng,i);
+        }
+        console.log("data : " +data);
+      }
+ 
+}
+
+displayData();

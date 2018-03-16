@@ -37,12 +37,17 @@
         </div>
        
         <div id="controller">
-                <div id="text">
-                    <div id="text">Barcelona Bicing Stations.</div>
-                    <div id="text">Hover over the circles to see how many free bikes there are.</div>
+                <div class="captionDiv">
+                    <h4>BARCELONA BICING STATIONS</h4>
+                    <h4>Hover over the circles to see how many free bikes there are.<h4>
+                    <h4>Select a barrio to display available bikes.<h4>
                     <button type="button"
                         onclick="displayData()">
-                        All the free bikes available.</button>
+                        Show / Hide free bikes</button>
+                    <div>
+                        <button type="button" onclick="ShowStationsWithNumOfBikes(document.getElementById('stationsWithNumOfBikes').value)">Show stations with desired number of available bikes.</button>
+                        <input type="text" id="stationsWithNumOfBikes" name="fname"> 
+                    </div>
                 </div>
         </div>
         
